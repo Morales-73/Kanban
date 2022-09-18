@@ -3,18 +3,18 @@ import React from 'react'
 const Columna = () => {
   return (
     <>
-          <div className="container text-center">
-              <div class="row">
-                  <div class="col">
+          <div className="container text-center p-1">
+              <div class="row p-5">
+                  <div class="col border border-primary pl-3 pr-3 m-5">
+                      Column 
+                  </div>
+                  <div class="col border border-primary pl-3 pr-3 m-5">
                       Column
                   </div>
-                  <div class="col">
+                  <div class="col border border-primary pl-3 pr-3 m-5">
                       Column
                   </div>
-                  <div class="col">
-                      Column
-                  </div>
-                  <div class="col">
+                  <div class="col border border-primary pl-3 pr-3 m-5">
                       Column
                   </div>
               </div>
