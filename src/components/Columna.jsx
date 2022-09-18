@@ -1,6 +1,6 @@
 import React from 'react'
-asdasd
-Tadeooo!!
+// asdasd
+// Tadeooo!!
 const Columna = () => {
   return (
     <>
@@ -12,7 +12,6 @@ const Columna = () => {
                       <div class="border border-primary">
                         <p>limpiar platos</p>
                         <p>URGENCIA: 1</p>
-
                         </div>
                   </div>
 
