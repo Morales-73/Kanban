@@ -20,7 +20,7 @@ const Columna = ({columna, agregarItem, listaItems}) => {
                     </div>
                     <div className='bg-dark container h-auto p-2 me-5 d-flex justify-content-between flex-column'>
 
-                        {listaItems.map(item=> item.columna == columna.id ? <Item/> : null)}
+                        {listaItems.map(item=> item.columna == columna.id ? <Item item={item}/> : null)}
 
                         <div>
                             {isEdit ? <Formulario editState={editState} agregarItem={agregarItem} columna={columna}/> : <button onClick={editState} className='w-100 text-start btn btn-dark'>+ Agregar Tarea</button>}
