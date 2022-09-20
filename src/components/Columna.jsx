@@ -2,7 +2,10 @@ import React, {useState} from 'react'
 import Formulario from './Formulario'
 import Item from './Item'
 
-const Columna = ({agregarItem, nombreItem}) => {
+const Columna = ({nombreItem, columnaCards}) => {
+
+
+    
 
     const [isEdit, setIsEdit] = useState(false)
 

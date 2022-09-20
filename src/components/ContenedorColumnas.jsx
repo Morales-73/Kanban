@@ -1,26 +1,55 @@
 import React, {useState} from 'react' 
 import Columna from './Columna'
 
-const ContenedorColumnas = ({agregarItem}) => { 
+const ContenedorColumnas = ({}) => { 
 
     const [columnas,setColumnas] = useState([{
         id:1,
-        nombre:'Pendiente'
+        nombre:'Pendiente',
+        cards: []
     },{
         id:2,
-        nombre:'En proceso'
+        nombre:'En proceso',
+        cards: []
     },{
         id:3,
-        nombre:'En pausa'
+        nombre:'En pausa',
+        cards: []
     },{
         id:4,
-        nombre:'Realizado'
+        nombre:'Realizado',
+        cards: []
     }])
+
+    const agregarItem = (tituloItem, columnaCards) => {
+
+        const nuevoItem = {
+          id: 1,
+          titulo: tituloItem,
+          columna: columnaCards.id
+        }
+        
+
+        switch (columnaCards.id) {
+            case columnaCards.id == nuevoItem.columna:
+                
+                const cardColumna = 
+
+                return setColumnas()
+                break;
+        
+            default:
+                
+                break;
+        }
+
+    }
+
 
     return (
         <div className="border bg-secondary rounded-3 border d-flex justify-content">
             {columnas.map(item=>
-                <Columna key={item.id} agregarItem={agregarItem} nombreItem={item.nombre}/>
+                <Columna key={item.id}  columnaCards={item}/>
             )}
         </div>
     )

@@ -9,7 +9,7 @@ const Item = () => {
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className='descripcion border'>
                         <span className="fw-bold">Titulo</span>
-                        <p className='parrafo'>Descripcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p className='parrafo' maxlength='11'>Sacar al perro mañana a las 9:20</p>
                     </div>
                     <span className="badge bg-primary rounded-pill">Prioridad</span>
                 </li>
