@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import ContenedorColumnas from './components/ContenedorColumnas';
 
 function App() {
-
-  
 
   return (
     <>

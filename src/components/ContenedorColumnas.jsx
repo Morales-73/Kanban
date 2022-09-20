@@ -1,58 +1,47 @@
-import React, {useState} from 'react' 
+import React, {useState} from 'react'
 import Columna from './Columna'
 
 const ContenedorColumnas = ({}) => { 
 
     const [columnas,setColumnas] = useState([{
         id:1,
-        nombre:'Pendiente',
-        cards: []
+        nombre:'Pendiente'
     },{
         id:2,
-        nombre:'En proceso',
-        cards: []
+        nombre:'En proceso'
     },{
         id:3,
-        nombre:'En pausa',
-        cards: []
+        nombre:'En pausa'
     },{
         id:4,
-        nombre:'Realizado',
-        cards: []
+        nombre:'Realizado'
     }])
 
-    const agregarItem = (tituloItem, columnaCards) => {
+    const [listaItems, setItemsCards] = useState([])
+
+    const agregarItem = (tituloItem,idColumna) => {
 
         const nuevoItem = {
-          id: 1,
-          titulo: tituloItem,
-          columna: columnaCards.id
-        }
-        
+            id: Math.floor(Math.random()*1000),
+            titulo: tituloItem,
+            columna: Number(idColumna)
+          }
 
-        switch (columnaCards.id) {
-            case columnaCards.id == nuevoItem.columna:
-                
-                const cardColumna = 
-
-                return setColumnas()
-                break;
-        
-            default:
-                
-                break;
-        }
-
+        setItemsCards([...listaItems, nuevoItem])
     }
 
+    console.log(listaItems)
 
     return (
-        <div className="border bg-secondary rounded-3 border d-flex justify-content">
-            {columnas.map(item=>
-                <Columna key={item.id}  columnaCards={item}/>
-            )}
-        </div>
-    )
-}    
+        <>
+            <div className="border bg-secondary rounded-3 border d-flex justify-content">
+                {columnas.map(columna =>
+                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems}/>
+                )}
+            </div>
+        </>
+    ) 
+
+}  
 
 export default ContenedorColumnas
