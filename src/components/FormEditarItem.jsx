@@ -25,7 +25,7 @@ const FormEditarItem = ({editState, editarItem, item}) => {
     <>
         <div>
             <form onSubmit={handleOnSubmit}>
-                <input className='form-control' autofocus="autofocus" value={titulo} onChange={handleOnChange} type="text" />
+                <input className='form-control' value={titulo} onChange={handleOnChange} type="text" />
                 <button type='submit' className='btn btn-success'>Aceptar</button>
             </form>
         </div>

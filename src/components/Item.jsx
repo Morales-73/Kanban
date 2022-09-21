@@ -2,10 +2,8 @@ import React from 'react'
 import '../index.css'
 import EditarItem from './EditarItem'
 
-const Item = ({item}) => {
+const Item = ({item, editarItem, eliminarItem}) => {
 
-
-   
   return (
     <>
         <div>
