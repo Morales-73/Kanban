@@ -2,8 +2,10 @@ import React from 'react'
 import '../index.css'
 import FormEditarItem from './EditarItem'
 
-const Item = ({item, eliminarItem, editarItem}) => {
+const Item = ({item}) => {
 
+
+   
   return (
     <>
         <div>
