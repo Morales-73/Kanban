@@ -5,19 +5,23 @@ const ContenedorColumnas = ({}) => {
 
     const [columnas,setColumnas] = useState([{
         id:1,
-        nombre:'Pendiente'
+        nombre:'Pendiente',
+        color: '#F28F3B'
     },{
         id:2,
-        nombre:'En proceso'
+        nombre:'En proceso',
+        color: '#0D3B66'
     },{
         id:3,
-        nombre:'En pausa'
+        nombre:'En pausa',
+        color: '#8B2635'
     },{
         id:4,
-        nombre:'Realizado'
+        nombre:'Realizado',
+        color: 'green'
     }])
 
-    const [listaItems, setItemsCards] = useState([])
+    const [listaItems, setItemsItems] = useState([])
 
     const agregarItem = (tituloItem,idColumna) => {
 
@@ -27,16 +31,28 @@ const ContenedorColumnas = ({}) => {
             columna: Number(idColumna)
           }
 
-        setItemsCards([...listaItems, nuevoItem])
+        setItemsItems([...listaItems, nuevoItem])
     }
 
-    console.log(listaItems)
+    const eliminarItem = (idItem) => {
+        const itemAEliminar = listaItems.filter(i => i.id !== idItem)
+        setItemsItems(itemAEliminar)
+    }
+
+    const editarItem = (id, tituloNuevo) => {
+        console.log(id)
+        // const itemAEditar = todos.find(t => t.id === id)
+        // todo.title = value
+        // setItemsItems([...listaItems])
+    }
+
+    // console.log(listaItems)
 
     return (
         <>
-            <div className="border bg-secondary rounded-3 border d-flex justify-content">
+            <div className="rounded-4 p-1 d-flex justify-content">
                 {columnas.map(columna =>
-                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems}/>
+                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem}/>
                 )}
             </div>
         </>

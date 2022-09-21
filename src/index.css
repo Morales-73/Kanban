@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* div,columna{
+  width: 400px;
+} */
+
 .descripcion{
   display: block;
   width: 150px;

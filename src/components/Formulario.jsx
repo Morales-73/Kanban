@@ -1,10 +1,9 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const Formulario = ({editState, agregarItem, columna}) => {
 
     const [titulo, setTitulo] = useState('')
-    const [descripcion, setDescripcion] = useState('')
+    // const [descripcion, setDescripcion] = useState('')
     const [idColumna, setIdColumna] = useState('')
 
     const handleSubmit = (e) => {
