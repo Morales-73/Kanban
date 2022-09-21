@@ -6,19 +6,23 @@ const ContenedorColumnas = ({}) => {
     const [columnas,setColumnas] = useState([{
         id:1,
         nombre:'Pendiente',
-        color: '#F28F3B'
+        color: '#252627',
+        colorTitulo: "#124E78"
     },{
         id:2,
-        nombre:'En proceso',
-        color: '#0D3B66'
+        nombre:'Proceso',
+        color: '#252627',
+        colorTitulo: "#E2C044"
     },{
         id:3,
-        nombre:'En pausa',
-        color: '#8B2635'
+        nombre:'Pausa',
+        color: '#252627',
+        colorTitulo: "#904E55"
     },{
         id:4,
         nombre:'Realizado',
-        color: 'green'
+        color: '#252627',
+        colorTitulo: "#6BF178"
     }])
 
     const [listaItems, setItemsItems] = useState([])
@@ -56,7 +60,7 @@ const ContenedorColumnas = ({}) => {
 
     return (
         <>
-            <div className="rounded-4 p-1 d-flex justify-content">
+            <div className="d-flex justify-content">
                 {columnas.map(columna =>
                     <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem}/>
                 )}

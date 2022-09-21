@@ -33,9 +33,9 @@ const Formulario = ({editState, agregarItem, columna}) => {
     <>
         <div>
             <form onSubmit={handleSubmit}>
-                <div className='d-flex align-items-center mt-3 border-top pt-3'>
-                    <label className='me-2' htmlFor="TituloPendiente">Titulo</label>
-                    <input className='form-control' id={columna.id} value={titulo} onChange={handleChangeTitulo} type="text" />
+                <div className='d-flex align-items-center mt-3 border-left pt-3'>
+                    <label className='m-2' htmlFor="TituloPendiente">Titulo</label>
+                    <input className='form-control' maxlength="20" id={columna.id} value={titulo} onChange={handleChangeTitulo} type="text" />
                 </div>
 
 
