@@ -25,10 +25,16 @@ const ContenedorColumnas = ({}) => {
 
     const agregarItem = (tituloItem,idColumna) => {
 
+        const prioridad = ["Baja","Normal","Urgente"]
+        const random =  Math.floor(Math.random() * prioridad.length)
+
         const nuevoItem = {
             id: Math.floor(Math.random()*1000),
             titulo: tituloItem,
-            columna: Number(idColumna)
+            columna: Number(idColumna),
+            descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+            prioridad: prioridad[random],
+            estimacion: Math.floor(Math.random()*30)
           }
 
         setItemsItems([...listaItems, nuevoItem])
@@ -40,13 +46,13 @@ const ContenedorColumnas = ({}) => {
     }
 
     const editarItem = (id, tituloNuevo) => {
-        console.log(id)
-        // const itemAEditar = todos.find(t => t.id === id)
-        // todo.title = value
-        // setItemsItems([...listaItems])
+        console.log(tituloNuevo,id)
+        const itemAEditar = listaItems.find(item => item.id === id)
+        itemAEditar.titulo = tituloNuevo
+        setItemsItems([...listaItems])
     }
 
-    // console.log(listaItems)
+    console.log(listaItems)
 
     return (
         <>
