@@ -7,7 +7,7 @@ const ContenedorColumnas = ({}) => {
         id:1,
         nombre:'Pendiente',
         color: '#252627',
-        colorTitulo: "#124E78"
+        colorTitulo: "#3A7CA5"
     },{
         id:2,
         nombre:'Proceso',
@@ -38,7 +38,9 @@ const ContenedorColumnas = ({}) => {
             columna: Number(idColumna),
             descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
             prioridad: prioridad[random],
-            estimacion: Math.floor(Math.random()*30)
+            estimacion: Math.floor(Math.random()*30),
+            prioridadColor: "#252627",
+            estimacionColor: "#252627"
           }
 
         setItemsItems([...listaItems, nuevoItem])

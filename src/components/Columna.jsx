@@ -16,7 +16,7 @@ const Columna = ({columna, agregarItem, listaItems, eliminarItem, editarItem}) =
 
   return (
     <>
-        <div className='m-2 p-1' style={{width: '400px', }}>
+        <div className='m-2 p-1' style={{width: '310px', }}>
                 <div className='columna w-100 h-auto rounded-3 d-flex flex-column justify-content-between text-white p-4 p-2' style={{backgroundColor: columna.color}}>
                     <div className='d-flex justify-content-between align-items-center border-bottom'>
                         <h4 className="font text-dark rounded-pill m-2 p-2" style={{backgroundColor: columna.colorTitulo}}>{columna.nombre}</h4>
