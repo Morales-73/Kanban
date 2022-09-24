@@ -2,7 +2,7 @@ import React from 'react'
 import '../index.css'
 import EditarItem from './EditarItem'
 
-const Item = ({item,  eliminarItem, editarItem, moverItem}) => {
+const Item = ({item,  eliminarItem, editarItem, moverItem, columna}) => {
 
   return (
     <>

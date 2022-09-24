@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import FormEditarItem from './FormEditarItem'
+import FormEditarItem from './FormEditarItem' 
+import MoverItem from './MoverItem'
 
-const EditarItem = ({item, editarItem, moverItem}) => {
+const EditarItem = ({item, editarItem, moverItem, columna}) => {
 
     const [isEdit, setIsEdit] = useState(false)
 
@@ -15,7 +16,9 @@ const EditarItem = ({item, editarItem, moverItem}) => {
             {isEdit ? 
             <FormEditarItem editState={editState} editarItem={editarItem} item={item}/> : 
             <button className='btn btn-success w-100 rounded-pill mb-2' onClick={()=>editState()}>Editar</button>}
-            <button className="btn btn-danger" onClick={()=>moverItem(item.columna)}> Mover </button>
+            
+            <MoverItem item={item} moverItem={moverItem} columna={columna}/>
+
         </div>
     </>
   )
