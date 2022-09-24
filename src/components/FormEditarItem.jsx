@@ -26,7 +26,7 @@ const FormEditarItem = ({editState, editarItem, item}) => {
         <div>
             <form onSubmit={handleOnSubmit}>
                 <input className='form-control' value={titulo} onChange={handleOnChange} type="text" />
-                <button type='submit' className='btn btn-success'>Aceptar</button>
+                <button type='submit' className='btn btn-success m-1'>Aceptar</button>
             </form>
         </div>
     </>
