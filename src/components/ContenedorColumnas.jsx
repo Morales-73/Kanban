@@ -83,7 +83,7 @@ const ContenedorColumnas = ({}) => {
         <>
             <div className="d-flex justify-content">
                 {columnas.map(columna =>
-                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem} moverItem={moverItem}/>
+                    <Columna key={columna.id} columnaItem={columna} columnas={columnas} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem} moverItem={moverItem}/>
                 )}
             </div>
         </>

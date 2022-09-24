@@ -2,13 +2,18 @@ import React, {useState} from 'react'
 import FormEditarItem from './FormEditarItem' 
 import MoverItem from './MoverItem'
 
-const EditarItem = ({item, editarItem, moverItem, columna}) => {
+const EditarItem = ({item, editarItem, moverItem, columnas, columnaItem}) => {
 
     const [isEdit, setIsEdit] = useState(false)
+    const [isMover, setIsMover] = useState(false)
 
     const editState = () => {
         setIsEdit(!isEdit)
     }
+
+    const moverState = () => {
+      setIsMover(!isMover)
+  }
 
   return (
     <>
@@ -16,8 +21,8 @@ const EditarItem = ({item, editarItem, moverItem, columna}) => {
             {isEdit ? 
             <FormEditarItem editState={editState} editarItem={editarItem} item={item}/> : 
             <button className='btn btn-success w-100 rounded-pill mb-2' onClick={()=>editState()}>Editar</button>}
-            
-            <MoverItem item={item} moverItem={moverItem} columna={columna}/>
+
+            {isMover ? <MoverItem item={item} moverItem={moverItem} columnas={columnas}/> : <button className='btn btn-primary w-100 rounded-pill mb-2' onClick={()=>moverState()}> Mover</button> }
 
         </div>
     </>
