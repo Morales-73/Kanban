@@ -68,13 +68,22 @@ const ContenedorColumnas = ({}) => {
         setListaItems([...listaItems])
     }
 
+    const moverItem = (idColumnaItem) => {
+        console.log(idColumnaItem)
+        const itemAMover = listaItems.find(item => item.columna === idColumnaItem) 
+        itemAMover.columna = console.log(idColumnaItem)
+        setListaItems([...listaItems])
+    }
+
     console.log(listaItems)
+
+
 
     return (
         <>
             <div className="d-flex justify-content">
                 {columnas.map(columna =>
-                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem}/>
+                    <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem} moverItem={moverItem}/>
                 )}
             </div>
         </>

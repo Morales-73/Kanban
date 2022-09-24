@@ -2,7 +2,7 @@ import React from 'react'
 import '../index.css'
 import EditarItem from './EditarItem'
 
-const Item = ({item,  eliminarItem, editarItem}) => {
+const Item = ({item,  eliminarItem, editarItem, moverItem}) => {
 
   return (
     <>
@@ -19,7 +19,7 @@ const Item = ({item,  eliminarItem, editarItem}) => {
                     </div>
                     <div className='d-flex flex-column'>
                         <button className='btn btn-danger rounded-pill mb-2' onClick={()=> eliminarItem(item.id)}>Eliminar</button>
-                        <EditarItem editarItem={editarItem} item={item}/>
+                        <EditarItem editarItem={editarItem} moverItem={moverItem} item={item}/>
                     </div>
                 </li>
             </ol>
