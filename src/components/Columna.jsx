@@ -22,7 +22,7 @@ const Columna = ({columna, agregarItem, listaItems, eliminarItem, editarItem, mo
                     </div>
                     <div className='container h-auto p-2 me-5 d-flex justify-content-between flex-column'>
 
-                        {listaItems.map(item=> item.columna == columna.id ? <Item key={item.id} item={item} eliminarItem={eliminarItem} editarItem={editarItem} moverItem={moverItem}/> : null)}
+                        {listaItems.map(item=> item.columna == columna.id ? <Item key={item.id} item={item} columna={item} eliminarItem={eliminarItem} editarItem={editarItem} moverItem={moverItem}/> : null)}
 
                         <div>
                             {isEdit ? <Formulario editState={editState} agregarItem={agregarItem} columna={columna}/> : <button onClick={editState} className='w-100 text-start btn btn-dark p-1 m-2'>+ Agregar Tarea</button>}

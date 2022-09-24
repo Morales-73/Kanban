@@ -1,6 +1,6 @@
 import React from "react";
 
-
+ultimo
 
 const Item = ({item, MoverItem, columna}) => {
   return (
@@ -18,5 +18,7 @@ const Item = ({item, MoverItem, columna}) => {
     </>
   );
 };
+
+
 
 export default Item;
