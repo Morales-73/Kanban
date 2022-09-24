@@ -4,6 +4,7 @@ import EditarItem from './EditarItem'
 
 const Item = ({item,  eliminarItem, editarItem}) => {
 
+
   return (
     <>
         <div style={{backgroundColor: "#252627"}}>
