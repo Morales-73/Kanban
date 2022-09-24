@@ -56,7 +56,7 @@ const ContenedorColumnas = ({}) => {
 
     return (
         <>
-            <div className="rounded-4 p-1 d-flex justify-content">
+            <div className="rounded-4 p-1 d-flex flex-wrap justify-content">
                 {columnas.map(columna =>
                     <Columna key={columna.id} columna={columna} agregarItem={agregarItem} listaItems={listaItems} eliminarItem={eliminarItem} editarItem={editarItem}/>
                 )}
