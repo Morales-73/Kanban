@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Formulario = ({editState, agregarItem, columnas}) => {
+const Formulario = ({editState, agregarItem, columna}) => {
 
     const [titulo, setTitulo] = useState('')
     // const [descripcion, setDescripcion] = useState('')
@@ -35,7 +35,7 @@ const Formulario = ({editState, agregarItem, columnas}) => {
             <form onSubmit={handleSubmit}>
                 <div className='d-flex align-items-center mt-3 border-left pt-3'>
                     <label className='m-2' htmlFor="TituloPendiente">Titulo</label>
-                    <input className='form-control' id={columnas.id} value={titulo} onChange={handleChangeTitulo} type="text" />
+                    <input className='form-control' id={columna.id} value={titulo} onChange={handleChangeTitulo} type="text" />
                 </div>
 
 
