@@ -70,11 +70,15 @@ const ContenedorColumnas = ({}) => {
 
     const moverItem = (idColumnaItem, idItem) => {
         console.log(idItem)
-        const item = console.log('item ' + listaItems.findIndex(item => item.id === idItem))
-        console.log("item " + item.columna)
-        item.columna = console.log("Columna a cambiar: " + idColumnaItem)
-        // const itemAMover = console.log('itemAmover ' + listaItems.find(item => item.columna === Number(idColumnaItem)))
-        // itemAMover.columna = console.log("item a mover " + idColumnaItem)
+        console.log(listaItems)
+        const item = listaItems.find(item => item.id === idItem)
+
+        console.log("item: " + item +" "+ typeof(item) + " " + item.columna)
+        console.log("columna: " + idColumnaItem)
+
+        item.columna =  idColumnaItem
+        const itemAMover =  listaItems.find(item => item.columna === Number(idColumnaItem))
+        itemAMover.columna = idColumnaItem
         setListaItems([...listaItems])
     }
 

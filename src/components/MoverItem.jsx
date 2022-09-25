@@ -15,11 +15,13 @@ const Item = ({item, moverItem, columnas, moverState}) => {
       <div>
         <div className="form-group">
           <label htmlFor="sel1">Select list:</label>
-          <select onClick={handleIputOption} className="form-control" id="sel1">
-            {columnas.map((item) => 
-            <option key={item.id}>{item.id}</option>
-            )}
-          </select>
+            <form onSubmit = {moverItem}>
+            <select onClick={handleIputOption} className="form-control" id="sel1">
+              {columnas.map((item) => 
+              <option key={item.id}>{item.id}</option>
+              )}
+            </select>
+            </form>
         </div>
       </div>
     </>
