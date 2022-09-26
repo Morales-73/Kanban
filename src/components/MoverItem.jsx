@@ -1,33 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Item = ({item, moverItem, columnas, moverState}) => {
 
-  const handleIputOption = (e) => {
+  const handleSelect = (e) => {
     const valor = e.target.value
 
     moverItem(Number(valor), item.id)
-
-    moverState()
   }
 
   return (
     <>
-      <div>
+      <div className="">
         <div className="form-group">
-          <label htmlFor="sel1">Select list:</label>
-            <form onSubmit = {moverItem}>
-            <select onClick={handleIputOption} className="form-control" id="sel1">
-              {columnas.map((item) => 
-              <option key={item.id}>{item.id}</option>
+            <select onClick={handleSelect} className="form-control">
+            <option value="opciones">Mover a</option>
+              {columnas.map(columna =>
+              <option key={columna.id} value={columna.id} onClick={()=>{moverState()}}>{columna.nombre}</option>
               )}
             </select>
-            </form>
         </div>
       </div>
     </>
   );
 };
-
-
 
 export default Item;

@@ -1,25 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
+import MoverItem from './MoverItem'
+import FormEditarItem from './FormEditarItem'
 import '../index.css'
-import EditarItem from './EditarItem'
 
-const Item = ({item,  eliminarItem, editarItem, moverItem, columna, columnas}) => {
+const Item = ({item,  eliminarItem, editarItem, moverItem, columnas}) => {
+
+    const [isEdit, setIsEdit] = useState(false)
+    const [isMover, setIsMover] = useState(false)
+
+    const editState = () => {
+        setIsEdit(!isEdit)
+    }
+
+    const moverState = () => {
+        setIsMover(!isMover)
+    }
 
   return (
     <>
         <div style={{backgroundColor: "#252627"}}>
             <ol className="list-group mb-2" style={{backgroundColor: "#3A7CA5"}}>
-                <li className="list-group-item d-flex justify-content-between align-items-start" style={{backgroundColor: "#3A7CA5"}}>
-                    <div className='descripcion'>
+                <li className="list-group-item d-flex justify-content-between align-items-center" style={{backgroundColor: "#3A7CA5"}}>
+                    <div className='info-items me-5'>
                         <span className="fw-bold fs-3">{item.titulo}</span>
                         <div>
-                            <span className="ms-2 badge rounded-pill m-2" style={{backgroundColor: item.prioridadColor}}>{item.prioridad}</span>
-                            <span className="ms-2 badge rounded-pill m-2" style={{backgroundColor: item.prioridadColor}}>{item.estimacion}</span>
+                            <span className="badge rounded-pill me-2" style={{backgroundColor: item.prioridadColor}}>{item.prioridad}</span>
+                            <span className="badge rounded-pill" style={{backgroundColor: item.prioridadColor}}>{item.estimacion}</span>
+                            <p className='descripcion'>{item.descripcion}</p>
                         </div>
-                        <p className='parrafo'>{item.descripcion}</p>
                     </div>
                     <div className='d-flex flex-column'>
                         <button className='btn btn-danger rounded-pill mb-2' onClick={()=> eliminarItem(item.id)}>Eliminar</button>
-                        <EditarItem editarItem={editarItem} columnas={columnas} moverItem={moverItem} item={item} columna={columna}/>
+                        {isEdit ? <FormEditarItem editState={editState} editarItem={editarItem} item={item}/> : <button className='btn btn-success w-100 rounded-pill mb-2' onClick={()=>editState()}>Editar</button>}
+                        {isMover ? <MoverItem item={item} moverItem={moverItem} columnas={columnas} moverState={moverState}/> : <button className='btn btn-primary w-100 rounded-pill' onClick={()=>{moverState()}}>Mover</button> }
                     </div>
                 </li>
             </ol>

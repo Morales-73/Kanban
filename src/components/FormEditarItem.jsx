@@ -23,10 +23,12 @@ const FormEditarItem = ({editState, editarItem, item}) => {
 
   return (
     <>
-        <div>
+        <div className='m-1'>
             <form onSubmit={handleOnSubmit}>
-                <input className='form-control' value={titulo} onChange={handleOnChange} type="text" />
-                <button type='submit' className='btn btn-success m-1'>Aceptar</button>
+                <div className='d-flex flex-column justify-content-center'>
+                    <input className='form-control mb-2' value={titulo} onChange={handleOnChange} placeholder="Nuevo titulo" type="text" />
+                    <button type='submit' className='btn btn-success m-1'>Aceptar</button>
+                </div>
             </form>
         </div>
     </>
