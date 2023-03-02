@@ -14,7 +14,7 @@ Kanban is a board that allows us to control and organize tasks in columns accord
 - Edit tasks title
 - Switch to dark theme
 
-# hooks used
+# Hooks used
 
 - useReducer
 - useState
