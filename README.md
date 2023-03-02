@@ -1,8 +1,8 @@
 # Kanban 🃏
 
-> Kanban is a board that allows us to control and organize tasks in columns according to their status (tasks, in process, paused, done).
+Kanban is a board that allows us to control and organize tasks in columns according to their status (tasks, in process, paused, done).
 
-This projects was created with ReactJS (Hooks).⚛
+> This projects was created with ReactJS (Hooks).⚛
 
 # Functionalities
 
