@@ -1,27 +1,27 @@
 # Kanban 🃏
 
-Kanban is a board that allows us to control and organize tasks in columns according to their status (tasks, in process, paused, done).
+Kanban es un tablero que nos permite controlar y organizar las tareas en columnas según su estado (pendiente, en proceso, en pausa, realizadas).
 
-> This projects was created with ReactJS (Hooks).⚛
+> Proyecto creado con ReactJS (Hooks).⚛
 
-# Functionalities
+# Functionalidades
 
-- Add tasks
-- Swap tasks
-- Remove tasks
-- Swap tasks between columns
-- remove all column tasks
-- Edit tasks title
-- Switch to dark theme
+- Agregar tareas
+- Intercambiar tareas
+- Eliminar tareas
+- Intercambiar tareas entre columnas
+- Eliminar todas las tareas de una columna
+- Editar tareas
+- Modo oscuro
 
-# Hooks used
+# Hooks usados
 
 - useReducer
 - useState
 - useRef
 - useContext
 
-# Development tools
+# Herramientas de desarrollo
 
 - [TailwindCSS](https://tailwindcss.com/)
 - [UUID](https://www.npmjs.com/package/uuid?activeTab=readme)
