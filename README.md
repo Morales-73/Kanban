@@ -4,15 +4,15 @@ Kanban es un tablero que nos permite controlar y organizar las tareas en columna
 
 > Proyecto creado con ReactJS (Hooks).⚛
 
-# Functionalidades
+# Funcionalidades
 
 - Agregar tareas
-- Intercambiar tareas
+- Mover las tareas entre columnas
+- Intercambiar tareas de una misma columna
 - Eliminar tareas
-- Intercambiar tareas entre columnas
 - Eliminar todas las tareas de una columna
 - Editar tareas
-- Modo oscuro
+- Modo oscuro/claro
 
 # Hooks usados
 
